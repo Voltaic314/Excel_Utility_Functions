@@ -54,7 +54,7 @@ def get_starting_data() -> tuple[int, int, int, str, str]:
     num_of_steps: int = total_num_of_rows // step_size # round down to lowest second
 
     starting_value_on_spreadsheet: int = get_user_input("Please provide the row # that your data starts at: ", True)
-    column_letter: str = get_user_input("Please provide the column letter that your data is in: ", False)
+    column_letter: str = get_user_input("Please provide the column letter that your data is in: ", False).upper()
     type_of_excel_function: str = get_user_input("Please provide the function you wish to use in excel: ", False).upper()
     tuple_of_all_the_data_we_need = (step_size, num_of_steps, starting_value_on_spreadsheet, 
                                      column_letter, type_of_excel_function)
